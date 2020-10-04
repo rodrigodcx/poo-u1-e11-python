@@ -1,11 +1,9 @@
 # coding: utf-8
 
-class Loja:
+class Endereco:
   
-  def __init__(self, nome_loja, logradouro, numero, complemento, bairro, 
-               municipio, estado, cep, telefone, observacao, cnpj,
-               inscricao_estadual):
-    self.nome_loja = nome_loja
+  def __init__(self, logradouro, numero, complemento, bairro, municipio, 
+      estado, cep):
     self.logradouro = logradouro
     self.numero = numero
     self.complemento = complemento
@@ -13,6 +11,14 @@ class Loja:
     self.municipio = municipio
     self.estado = estado
     self.cep = cep
+
+
+class Loja:
+  
+  def __init__(self, nome_loja, endereco, telefone, observacao, cnpj, 
+      inscricao_estadual):
+    self.nome_loja = nome_loja
+    self.endereco = endereco
     self.telefone = telefone
     self.observacao = observacao
     self.cnpj = cnpj
